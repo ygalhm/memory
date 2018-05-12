@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+  background-image: url('./img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#game{
+  margin-top: 60px;
+}
+
+.grid {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 160px;
+  width: 160px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: #FAB942 url('./img/back.jpeg') no-repeat center center / contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match .front {
+  background: white !important;
+  opacity: 0.2;
+}
+
+#btn1{
+  background-color: #FAB942;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#btn2{
+  background-color: blue;
+  opacity: 0.7;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+
+}
+
+#headerOk{
+  position: fixed;;
+  top:3%; 
+  left:40%;
+}
